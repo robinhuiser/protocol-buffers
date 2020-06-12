@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "my_code/4-exercises-solutions/4-city-package.proto";
+
+package my.location.street;
+
+message Street {
+    string street_name = 1;
+    my.location.city.City city = 2;
+}

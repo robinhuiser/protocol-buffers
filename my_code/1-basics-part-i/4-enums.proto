@@ -1,0 +1,34 @@
+// The syntax for this file is proto version 3
+syntax = "proto3";
+
+/* Person is used to identify
+ * users across oour system */ 
+message Person {
+    // the age as of the person's creation
+    int32 age = 1;
+
+    // the first name as document during onboarding
+    string first_name = 2;
+    string last_name = 3; // Last name idem dito
+
+    // small_picture represents a small .jpg file
+    bytes small_picture = 4;
+    bool is_profile_verified = 5;
+
+    // height of the person in cm
+    float height = 6;
+
+    // a list of phone numbers that is optional to provide
+    repeated string phone_numbers = 7;
+
+    // valid eye colours
+    enum EyeColour {
+        UNKOWN_EYE_COLOUR = 0;
+        EYE_GREEN = 1;
+        EYE_BLUE = 2;
+        EYE_BROWN = 3;
+    }
+
+    // and here is the field
+    EyeColour eye_colour = 8;
+}

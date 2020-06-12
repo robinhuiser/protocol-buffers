@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package my.date;
+
+message Date {
+    // Value must be between 1 and 9999, if you want to 
+    // specify a date without a year, use 0
+    uint32 year = 1;
+
+    // Value must be between 1 and 12
+    uint32 month = 2;
+
+    // Value must be between 1 and 31
+    uint32 day = 3;
+}
